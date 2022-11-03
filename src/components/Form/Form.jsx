@@ -10,7 +10,7 @@ const Form = () => {
         tg.MainButton.setParams({
             text: 'Отправить данные',
         });
-    }, []);
+    }, [tg.MainButton]);
 
     React.useEffect(() => {
         if (!data.country || !data.street) {
@@ -18,7 +18,7 @@ const Form = () => {
         } else {
             tg.MainButton.show();
         }
-    }, [data.country, data.street]);
+    }, [data.country, data.street, tg.MainButton]);
 
     const onSubmit = () => {
         console.log('data: ', data);
